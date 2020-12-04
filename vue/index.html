@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+         <!-- <ul>
+             <li v-for="Blog in Blogs" :key="Blog.id">{{Blog.text}}</li>
+         </ul> -->
+         <p :style="styleObject">{{ message }}</p>
+
+         <h1 v-if="awesome">Vue is awesome!</h1>
+         <h1 v-else>Oh no</h1>
+
+        <ul>
+            
+        </ul>
+
+       <ol>
+            <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+            >
+                femi is a fine boy
+            </todo-item>
+       </ol>
+        <div>
+
+            <!-- <div> <strong> Error! </strong>
+                <slot> </slot>
+            </div> -->
+            <product-slot>
+                something had happened
+            </product-slot>
+            <product-slot
+                v-for="post in posts"
+                :key="post.id"
+                :title="post.title"
+            >
+            </product-slot>
+            
+        </div>
+       
+    </div>     
+    
+   
+    <script src="sand.js"></script>
+   
+    <script src="components/ProductDisplay.js"></script>
+    <script SRC="components/ProductSlot.js"></script>
+    <script>
+
+        const mountedApp = app.mount("#app");   
+
+    </script>
+</body>
+</html>
